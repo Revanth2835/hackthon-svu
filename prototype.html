@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Footprint Reduction Prototype</title>
+    <link rel="stylesheet" href="prototype.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#calculator">Carbon Calculator</a></li>
+                <li><a href="#resources">Sustainability Resources</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="home-text-align">
+            <h1 style="font-size:40px;">Combat Climate Change</h1>
+            <p>Calculate your carbon footprint and take action to reduce it.</p>
+        </section>
+
+        <section id="calculator" class="calculator-page">
+            <h2>Carbon Footprint Calculator</h2>
+            <div class="image-container">
+                <img src="https://res.cloudinary.com/du3lwssct/image/upload/v1711227222/IMG_20240324_022251_wirkbj.jpg" alt="Transportation" title="Mode of transportation">
+                <img src="https://res.cloudinary.com/du3lwssct/image/upload/v1711227445/jet-airplane-sky-sunset-time-600nw-90530008_rh2xpq.jpg" alt="Air Travel" title="Frequency of air travel">
+                <img src="https://res.cloudinary.com/du3lwssct/image/upload/v1711227677/IMG_20240324_023059_shu18w.jpg" alt="Energy Saving" title="Energy-saving practices">
+                <img src="https://res.cloudinary.com/du3lwssct/image/upload/v1711227891/5632727-green-recycling-symbol-with-carbon-footprint-isolated-on-white-background_vur4ye.jpg" alt="Recycling" title="Recycling and composting habits">
+            </div>
+            <form id="carbonForm">
+                <label>1. What is your typical mode of transportation for commuting to work/school?</label>
+                <div class="radio-group">
+                    <input type="radio" id="car" name="transportation" value="car" required>
+                    <label for="car">Car</label>
+                    <input type="radio" id="motorcycle" name="transportation" value="motorcycle">
+                    <label for="motorcycle">Motorcycle</label>
+                    <input type="radio" id="public" name="transportation" value="public">
+                    <label for="public">Public Transport</label>
+                    <input type="radio" id="ev" name="transportation" value="ev">
+                    <label for="ev">EV</label>
+                </div>
+                <label for="distance">Kilometers traveled in any means of transport selected?</label>
+                <input type="number" id="distance" name="distance" required>
+
+                <label>2. How often do you travel by air?</label>
+                <div class="radio-group">
+                    <input type="radio" id="never" name="air" value="never" required>
+                    <label for="never">Never or rarely - Short-haul: &lt; 1,000 km</label>
+                    <input type="radio" id="medium" name="air" value="medium">
+                    <label for="medium">0-2 years - Medium-haul: 1,000-4,000 km</label>
+                    <input type="radio" id="long" name="air" value="long">
+                    <label for="long">3-5 years - Long-haul: &lt; 10,000 km</label>
+                    <input type="radio" id="ultra" name="air" value="ultra">
+                    <label for="ultra">6+ years - Ultra Long &gt;10,000 km</label>
+                </div>
+
+                <label>3. How often do you use energy-saving practices at home?</label>
+                <div class="radio-group">
+                    <input type="radio" id="always-energy" name="energy" value="always" required>
+                    <label for="always-energy">Always: I actively implement energy-saving practices in most situations.</label>
+                    <input type="radio" id="frequently-energy" name="energy" value="frequently">
+                    <label for="frequently-energy">Frequently: I try to do most energy-saving things, but might occasionally forget.</label>
+                    <input type="radio" id="sometimes-energy" name="energy" value="sometimes">
+                    <label for="sometimes-energy">Sometimes or rarely: I'm aware of some practices but don't do them consistently.</label>
+                    <input type="radio" id="never-energy" name="energy" value="never">
+                    <label for="never-energy">Never: I haven't considered implementing energy-saving practices.</label>
+                </div>
+
+                <label>4. How often do you recycle and compost?</label>
+                <div class="radio-group">
+                    <input type="radio" id="always-recycle" name="recycle" value="always" required>
+                    <label for="always-recycle">Always: I recycle and compost consistently.</label>
+                    <input type="radio" id="frequently-recycle" name="recycle" value="frequently">
+                    <label for="frequently-recycle">Frequently: I do both frequently but might occasionally miss some items.</label>
+                    <input type="radio" id="sometimes-recycle" name="recycle" value="sometimes">
+                    <label for="sometimes-recycle">Sometimes or rarely: I recycle or compost some items but not all the time.</label>
+                    <input type="radio" id="never-recycle" name="recycle" value="never">
+                    <label for="never-recycle">Never: I don't recycle or compost.</label>
+                </div>
+
+                <button type="submit">Calculate</button>
+            </form>
+            <div id="result"></div>
+            <div id="recommendations"></div>
+        </section>
+
+        <section id="resources" class="resources-page">
+            <h2>Sustainability Resources</h2>
+            <ul>
+                <li>
+                    <h3>Energy-Saving Tips</h3>
+                    <p>Learn how to reduce energy consumption in your home and workplace.</p>
+                    <a href="https://www.energy.gov/save" target="_blank">Read More</a>
+                </li>
+                <li>
+                    <h3>Sustainable Transportation</h3>
+                    <p>Explore eco-friendly transportation options and their benefits.</p>
+                    <a href="https://afdc.energy.gov/data" target="_blank">Read More</a>
+                </li>
+                <li>
+                    <h3>Waste Reduction Strategies</h3>
+                    <p>Discover ways to reduce, reuse, and recycle for a greener lifestyle.</p>
+                    <a href="https://www.epa.gov/recycle" target="_blank">Read More</a>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Carbon Footprint Reduction Prototype. CYNOSURE. TEAM CONQUERORS:</p>
+    </footer>
+
+    <script src="prototype.js"></script>
+</body>
+
+</html>
